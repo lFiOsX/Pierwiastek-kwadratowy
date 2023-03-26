@@ -4,11 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Spr_pierw_kwadrat
+namespace Pierwiastek_kwadratowy
 {
     public class QuadraticEquation
     {
-        public double calcDelta(int a, int b, int c)
+        private double x0 { get; set; }
+        private double x1 { get; set; }
+        private double x2 { get; set; }
+        public int a { get; set; }
+        public int b { get; set; }
+        public int c { get; set; }
+
+
+        private double calcDelta(int a, int b, int c)
         {
             double delta = 0;
             // obliczanie delty ze wzoru: D = b^2 - 4ac
