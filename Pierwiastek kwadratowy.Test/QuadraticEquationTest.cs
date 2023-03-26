@@ -50,11 +50,13 @@ namespace Pierwiastek_kwadratowy.Test
             qe.a = 1;
             qe.b = 2;
             qe.c = 1;
+            bool expect = false;
             // delta = 0 
             //Act
             qe.calcDeltaZeros(qe.a, qe.b, qe.c);
+            expect = qe.x0 == -1;
             //Asert
-            Assert.Equal(qe.x0 , -1);
+            Assert.True(expect);
             
         }
 
@@ -71,7 +73,7 @@ namespace Pierwiastek_kwadratowy.Test
             qe.calcDeltaZeros(qe.a, qe.b, qe.c);
             //Asert
             Assert.Equal(qe.x1, -3);
-            Assert.Equal(qe.x2, 2);
+            Assert.False(qe.x2 != 2);
 
         }
     }
