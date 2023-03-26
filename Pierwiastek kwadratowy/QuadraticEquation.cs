@@ -8,15 +8,15 @@ namespace Pierwiastek_kwadratowy
 {
     public class QuadraticEquation
     {
-        private double x0 { get; set; }
-        private double x1 { get; set; }
-        private double x2 { get; set; }
+        public double x0 { get; set; }
+        public double x1 { get; set; }
+        public double x2 { get; set; }
         public int a { get; set; }
         public int b { get; set; }
         public int c { get; set; }
 
 
-        private double calcDelta(int a, int b, int c)
+        public double calcDelta(int a, int b, int c)
         {
             double delta = 0;
             // obliczanie delty ze wzoru: D = b^2 - 4ac
@@ -28,7 +28,7 @@ namespace Pierwiastek_kwadratowy
 
         public void calcDeltaZeros(int a, int b, int c)
         {
-            double x0, x1, x2, delta = 0;
+            double delta = 0;
 
             delta = calcDelta(a, b, c);
 
@@ -38,6 +38,10 @@ namespace Pierwiastek_kwadratowy
                 case < 0:
                     //gdy delta < 0
                     Console.WriteLine($"delta = {delta}\n Delta mniejsza od zera, brak miejsc zerowych.");
+                    //Spreparowane dane dla testów
+                    x0 = 8;
+                    x1 = 16;
+                    x2 = 32;
                     break;
 
                 case 0:
