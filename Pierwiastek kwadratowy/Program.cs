@@ -1,9 +1,4 @@
 ﻿
-// 1,2,1 = 0
-// 1,1,-6 = 25
-// 1,0,1 =  -4
-
-
 using Pierwiastek_kwadratowy;
 
 
